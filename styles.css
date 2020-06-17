@@ -1,0 +1,95 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul,
+li,
+div,
+header,
+main,
+footer,
+article {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Themes */
+
+body {
+    --bg-pri: #404040;
+    --bg-sec: #2C2C2C;
+    --bg-tir: #1B1B1B;
+    --fg-txt: #FFFFFF;
+}
+
+
+/* Defaults */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: var(--bg-sec);
+    color: var(--fg-txt);
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--bg-tir);
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#start {
+    width: 20em;
+    height: 6em;
+    background-color: var(--bg-pri);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#start:hover {
+    background-color: var(--bg-tir);
+}
+
+#quiz {
+    display: none;
+}
+
+#score {
+    display: none;
+}
+
+footer {
+    text-align: center;
+}
+
+
+/* Utilities */
+
+.padded {
+    padding: 1em;
+}

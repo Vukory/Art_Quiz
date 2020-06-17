@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="padded">
+        <h1>Art Quiz</h1>
+    </header>
+    <main class="padded">
+        <div id="container">
+            <div id="start">
+                <h2>Započni kviz</h2>
+            </div>
+            <div id="quiz">
+                <div id="question_image"></div>
+                <div id="answers">
+                    <div id="answer" id="A" onclick="check_answer('A')"></div>
+                    <div id="answer" id="B" onclick="check_answer('B')"></div>
+                    <div id="answer" id="C" onclick="check_answer('C')"></div>
+                    <div id="answer" id="D" onclick="check_answer('D')"></div>
+                </div>
+            </div>
+            <div id="score"></div>
+        </div>
+    </main>
+
+    <footer class="padded">
+        <small>Copyright &copy; Vukory 2020-2020</small>
+    </footer>
+
+    <script src="quiz.js"></script>
+</body>
+
+</html>
