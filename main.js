@@ -1,33 +1,39 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    console.log('AM READY UWU');
+  console.log('AM READY UWU');
 
-    $('#start').click(function() {
-        console.log('START QUIZ BUTTON WAS CLICKED UWU');
-        $(this).css('display', 'none');
-        renderQuestion();
-    });
+  $('#start').click(function () {
+    console.log('START QUIZ BUTTON WAS CLICKED UWU');
+    $(this).css('display', 'none');
+    renderQuestion();
+  });
 });
 
 //creating questions
 const questions = [{
-        image: "assets/images/Lake.jpg",
-        imageAlt: "Lake idk",
-        answers: ["Van Gogh", "Monet", "Rembrandt", "Leonrdo da Vinci"],
-        correctAnswer: 1
-    },
-    {
-        image: "assets/images/pearl.jpg",
-        imageAlt: "Girl with eaarring idk",
-        answers: ["Van Gogh", "Monet", "Rembrandt", "Leonrdo da Vinci"],
-        correctAnswer: 2
-    },
-    {
-        image: "assets/images/MonaLisa.jpg",
-        imageAlt: "Girl with eaarring idk",
-        answers: ["Van Gogh", "Monet", "Rembrandt", "Leonrdo da Vinci"],
-        correctAnswer: 3
-    }
+  image: "assets/images/monalisa.png",
+  imageAlt: "Lake idk",
+  answers: ["Van Gogh", "Monet", "Rembrandt", "Leonrdo da Vinci"],
+  correctAnswer: 3
+},
+{
+  image: "assets/images/pearl_earring.png",
+  imageAlt: "Girl with eaarring idk",
+  answers: ["Van Gogh", "Monet", "Rembrandt", "Leonrdo da Vinci"],
+  correctAnswer: 2
+},
+{
+  image: "assets/images/starry_night.png",
+  imageAlt: "Girl with eaarring idk",
+  answers: ["Van Gogh", "Monet", "Rembrandt", "Leonrdo da Vinci"],
+  correctAnswer: 3
+},
+{
+  image: "assets/images/cubes.png",
+  imageAlt: "Girl with eaarring idk",
+  answers: ["Van Gogh", "Monet", "Rembrandt", "Leonrdo da Vinci"],
+  correctAnswer: 3
+}
 ];
 
 //indeks pitanja koje korisnik trenutno odgovara (početna vrijednost se postavlja na 0-prvo pitanje)
@@ -39,55 +45,55 @@ let score = 0;
 
 function renderQuestion() {
 
-    console.log('rendering question with index', currentQuestionIndex, 'uwu');
-    const question = questions[currentQuestionIndex];
-    const questionImage = $('#question-image');
-    questionImage.html(`<img src="${question.image}" alt="${question.image}" width="200px"/>`);
+  console.log('rendering question with index', currentQuestionIndex, 'uwu');
+  const question = questions[currentQuestionIndex];
+  const questionImage = $('#question-image');
+  questionImage.html(`<img src="${question.image}" alt="${question.image}" height="350px"/>`);
 
-    const answersElement = $('#answers');
-    question.answers.forEach((answer, index) => {
-        answersElement.append(`<div class="answer" data-answer-index="${index}">${answer}</div>`);
-    });
+  const answersElement = $('#answers');
+  question.answers.forEach((answer, index) => {
+    answersElement.append(`<div class="answer" data-answer-index="${index}">${answer}</div>`);
+  });
 
-    const answerElements = $('.answer');
+  const answerElements = $('.answer');
 
-    answerElements.click(function() {
-        console.log('The answer was clicked');
-        const clickedElement = $(this);
+  answerElements.click(function () {
+    console.log('The answer was clicked');
+    const clickedElement = $(this);
 
-        answerElements.off('click');
+    answerElements.off('click');
 
-        const correctAnswer = questions[currentQuestionIndex].correctAnswer;
-        const actualAnswer = $(this).data('answerIndex');
-        const isCorrect = correctAnswer === actualAnswer;
+    const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+    const actualAnswer = $(this).data('answerIndex');
+    const isCorrect = correctAnswer === actualAnswer;
 
-        if (isCorrect) {
-            score++;
-            clickedElement.css('background-color', "green");
-        } else {
-            clickedElement.css('background-color', "red");
-        }
+    if (isCorrect) {
+      score++;
+      clickedElement.css('background-color', "#498659");
+    } else {
+      clickedElement.css('background-color', "#864b49");
+    }
 
-        console.log('The question is answered correctly:', isCorrect);
+    console.log('The question is answered correctly:', isCorrect);
 
-        window.setTimeout(() => {
-            answerElements.remove();
-            $('img').remove();
-            if (currentQuestionIndex < lastQuestionIndex) {
-                currentQuestionIndex++;
-                renderQuestion();
-                console.log(currentQuestionIndex);
-            } else {
-                console.log('Finished quiz');
-                score_render();
-            }
-        }, 700);
-    });
+    window.setTimeout(() => {
+      answerElements.remove();
+      $('img').remove();
+      if (currentQuestionIndex < lastQuestionIndex) {
+        currentQuestionIndex++;
+        renderQuestion();
+        console.log(currentQuestionIndex);
+      } else {
+        console.log('Finished quiz');
+        score_render();
+      }
+    }, 700);
+  });
 }
 
 function score_render() {
-    $('#score').css("display", "block");
-    //calculate the percentage of corectly answered questions
-    let final_score = Math.round(100 * score / questions.length);
-    $('#score').html(`<p>${final_score}%</p>`);
+  $('#score').css("display", "block");
+  //calculate the percentage of corectly answered questions
+  let final_score = Math.round(100 * score / questions.length);
+  $('#score').html(`<p>${final_score}%</p>`);
 }

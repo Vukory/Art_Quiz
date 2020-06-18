@@ -1,91 +1,87 @@
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-ul,
-li,
-div,
-header,
-main,
-footer,
-article {
-    margin: 0;
-    padding: 0;
+html, body, h1, h2, h3, h4, h5, h6, p, span, ul, li, div, header, main, footer, article {
+  margin: 0;
+  padding: 0;
 }
-
 
 /* Themes */
 
 body {
-    --bg-pri: #404040;
-    --bg-sec: #2C2C2C;
-    --bg-tir: #1B1B1B;
-    --fg-txt: #FFFFFF;
+  --bg-pri: #404040;
+  --bg-sec: #2C2C2C;
+  --bg-tir: #1B1B1B;
+  --fg-txt: #FFFFFF;
 }
-
 
 /* Defaults */
 
-html,
-body {
-    height: 100%;
+html, body {
+  height: 100%;
 }
 
 body {
-    font-family: Roboto, sans-serif;
-    background-color: var(--bg-sec);
-    color: var(--fg-txt);
-    overflow-x: hidden;
+  font-family: Roboto, sans-serif;
+  background-color: var(--bg-sec);
+  color: var(--fg-txt);
+  overflow-x: hidden;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-    background-color: var(--bg-tir);
-    text-align: center;
+  background-color: var(--bg-tir);
+  text-align: center;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
 #start {
-    width: 20em;
-    height: 6em;
-    background-color: var(--bg-pri);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 20em;
+  height: 6em;
+  background-color: var(--bg-pri);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#start:hover {
-    background-color: var(--bg-tir);
+#start:hover, .answer:hover {
+  background-color: var(--bg-tir);
 }
 
 #score {
-    display: none;
+  display: none;
+}
+
+#answers, .answer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer {
+  background-color: var(--bg-pri);
+  height: 1.5em;
+  width: 90%;
+  margin: 0.2em;
+  border-radius: 5px;
+  background-color: #864b49;
 }
 
 footer {
-    text-align: center;
+  text-align: center;
 }
-
 
 /* Utilities */
 
 .padded {
-    padding: 1em;
+  padding: 1em;
 }
