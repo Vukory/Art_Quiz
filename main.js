@@ -50,6 +50,7 @@ const questions = [{
 
 //indeks pitanja koje korisnik trenutno odgovara (početna vrijednost se postavlja na 0-prvo pitanje)
 let currentQuestionIndex = 0;
+
 //questions.length vraća dužinu niza objekata pitanja, s obzirom da se u varijablu sprema indeks zadnjeg pitanja od veličine se oduzima 1
 //primjer niz od 3 pitanja questions=[a, b, c] ima indekse 0 1 i 2 dakle indeks zadnjeg elementa je 3-1=2
 let lastQuestionIndex = questions.length - 1;
