@@ -13,26 +13,38 @@ $(document).ready(function () {
 const questions = [{
   image: "assets/images/monalisa.png",
   imageAlt: "Lake idk",
-  answers: ["Van Gogh", "Monet", "Rembrandt", "Leonrdo da Vinci"],
-  correctAnswer: 3
+  answers: ["Leonrdo da Vinci", "Johannes Vermeer", "Andy Warhol", "Diego Rodríguez"],
+  correctAnswer: 0
 },
 {
   image: "assets/images/pearl_earring.png",
   imageAlt: "Girl with eaarring idk",
-  answers: ["Van Gogh", "Monet", "Rembrandt", "Leonrdo da Vinci"],
+  answers: ["Leonrdo da Vinci", "Claude Monet", "Johannes Vermeer", "Van Gogh"],
   correctAnswer: 2
 },
 {
   image: "assets/images/starry_night.png",
   imageAlt: "Girl with eaarring idk",
-  answers: ["Van Gogh", "Monet", "Rembrandt", "Leonrdo da Vinci"],
-  correctAnswer: 3
+  answers: ["Pablo Picasso", "Van Gogh", "Rembrandt Harmenszoon", "Leonrdo da Vinci"],
+  correctAnswer: 1
 },
 {
   image: "assets/images/cubes.png",
   imageAlt: "Girl with eaarring idk",
-  answers: ["Van Gogh", "Monet", "Rembrandt", "Leonrdo da Vinci"],
+  answers: ["Salvador Dalí", "Gustav Klimt ", "Frida Kahlo", "Piet Mondrian"],
   correctAnswer: 3
+},
+{
+  image: "assets/images/scream.png",
+  imageAlt: "Girl with eaarring idk",
+  answers: ["Jackson Pollock", "Claude Monet", "Edvard Munch", "Michelangelo Buonarroti"],
+  correctAnswer: 2
+},
+{
+  image: "assets/images/soup.png",
+  imageAlt: "Girl with eaarring idk",
+  answers: ["Édouard Manet", "Andy Warhol", "Sandro Botticelli", "Piet Mondrian"],
+  correctAnswer: 1
 }
 ];
 
@@ -48,7 +60,7 @@ function renderQuestion() {
   console.log('rendering question with index', currentQuestionIndex, 'uwu');
   const question = questions[currentQuestionIndex];
   const questionImage = $('#question-image');
-  questionImage.html(`<img src="${question.image}" alt="${question.image}" height="350px"/>`);
+  questionImage.html(`<img src="${question.image}" alt="${question.image}"/>`);
 
   const answersElement = $('#answers');
   question.answers.forEach((answer, index) => {
