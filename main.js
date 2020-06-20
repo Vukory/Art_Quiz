@@ -109,10 +109,10 @@ function renderQuestion() {
    * @param {jQuery} #question-image Kontejner u koji ce se smjestiti slika za pitanje
    */
   const questionImage = $('#question-image');
-  questionImage.html(`<img src="${question.image}" alt="${question.imageAlt}"/>`);
+  questionImage.html(`<img id="painting-image"src="${question.image}" alt="${question.imageAlt}"/>`);
 
-  questionImage.ready(function () {
-    $('img').addClass('framed');
+  $('#painting-image').ready(function () {
+    $(this).addClass('framed');
   });
 
 
