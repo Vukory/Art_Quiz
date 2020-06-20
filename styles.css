@@ -3,7 +3,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, ul, li, div, header, main, footer, 
   padding: 0;
 }
 
-/* Themes */
+/* Teme/Boje */
 
 body {
   --bg-pri: #404040;
@@ -12,7 +12,7 @@ body {
   --fg-txt: #FFFFFF;
 }
 
-/* Defaults */
+/* Default */
 
 html, body {
   height: 100%;
@@ -44,6 +44,8 @@ main {
   flex-grow: 1;
 }
 
+/* Start-container */
+
 #start-container {
   max-width: 50%;
   text-align: center;
@@ -68,11 +70,15 @@ main {
   cursor: pointer;
 }
 
+/* Slika za pitanje */
+
 img {
   margin: 1.5em 0 0 0;
   max-height: 400px;
   max-width: 400px;
 }
+
+/* Kontejner sa odgovorima */
 
 #answers, .answer {
   display: flex;
@@ -93,10 +99,14 @@ img {
   border-radius: 5px;
 }
 
+/* Kontejner sa rezultatom */
+
 #score {
   display: none;
   padding: 0.2em;
 }
+
+/* Kontejner sa rezultatom */
 
 footer {
   text-align: center;
