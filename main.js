@@ -109,7 +109,12 @@ function renderQuestion() {
    * @param {jQuery} #question-image Kontejner u koji ce se smjestiti slika za pitanje
    */
   const questionImage = $('#question-image');
-  questionImage.html(`<img class="framed" src="${question.image}" alt="${question.imageAlt}"/>`);
+  questionImage.html(`<img src="${question.image}" alt="${question.imageAlt}"/>`);
+
+  questionImage.ready(function () {
+    $('img').addClass('framed');
+  });
+
 
   /**
    * Inicijaliziranje varijable answersElement
