@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Art Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="main.js"></script>
@@ -16,14 +17,18 @@
   </header>
   <main class="padded">
     <div id="container">
-      <div id="start">
-        <h2>Započni kviz</h2>
+      <div id="start-container" class="framed">
+        <p>Kviz testiranja poznavanja autora poznatih djela. Kviz se satoji od stiliziranih verzija umjetničkih djela.
+          Povežite svako djelo sa odgovarajućim umjetnikom. Sretno!</p>
+        <div id="start">
+          <h2>Započni kviz</h2>
+        </div>
       </div>
       <div id="quiz">
         <div id="question-image"></div>
         <div id="answers"></div>
       </div>
-      <div id="score"></div>
+      <div id="score" class="framed"></div>
     </div>
   </main>
 

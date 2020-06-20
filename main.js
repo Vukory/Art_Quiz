@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   $('#start').click(function () {
     console.log('START QUIZ BUTTON WAS CLICKED UWU');
-    $(this).css('display', 'none');
+    $('#start-container').css('display', 'none');
     renderQuestion();
   });
 });
@@ -45,6 +45,30 @@ const questions = [{
   imageAlt: "Girl with eaarring idk",
   answers: ["Édouard Manet", "Andy Warhol", "Sandro Botticelli", "Piet Mondrian"],
   correctAnswer: 1
+},
+{
+  image: "assets/images/whistlers_mother.png",
+  imageAlt: "Girl with eaarring idk",
+  answers: ["Édouard Manet", "Wassily Kandinsky", "Edward Hopper", "James Whistler"],
+  correctAnswer: 3
+},
+{
+  image: "assets/images/son_of_man.png",
+  imageAlt: "Girl with eaarring idk",
+  answers: ["René Magritte", "Sandro Botticelli", "Francisco Goya", "Georges Seurat"],
+  correctAnswer: 0
+},
+{
+  image: "assets/images/kanagawa.png",
+  imageAlt: "Girl with eaarring idk",
+  answers: ["Yoshitomo Nara", "Takashi Murakami", "Katsushika Hokusai", "Kitagawa Utamaro"],
+  correctAnswer: 2
+},
+{
+  image: "assets/images/american_gothic.png",
+  imageAlt: "Girl with eaarring idk",
+  answers: ["Albrecht Dürer", "Grant Wood", "Camille Pissarro", "Winslow Homer"],
+  correctAnswer: 1
 }
 ];
 
@@ -61,7 +85,7 @@ function renderQuestion() {
   console.log('rendering question with index', currentQuestionIndex, 'uwu');
   const question = questions[currentQuestionIndex];
   const questionImage = $('#question-image');
-  questionImage.html(`<img src="${question.image}" alt="${question.image}"/>`);
+  questionImage.html(`<img class="framed" src="${question.image}" alt="${question.image}"/>`);
 
   const answersElement = $('#answers');
   question.answers.forEach((answer, index) => {
