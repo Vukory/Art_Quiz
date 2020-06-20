@@ -23,19 +23,19 @@ I indeks elementa u nizu koji oznacava tacan odgovor
 const questions = [{
   image: "assets/images/monalisa.png",
   imageAlt: "Mona Lisa",
-  answers: ["Leonrdo da Vinci", "Johannes Vermeer", "Andy Warhol", "Diego Rodríguez"],
+  answers: ["Leonardo da Vinci", "Johannes Vermeer", "Andy Warhol", "Diego Rodríguez"],
   correctAnswer: 0
 },
 {
   image: "assets/images/pearl_earring.png",
   imageAlt: "Girl with a Pearl Earring",
-  answers: ["Leonrdo da Vinci", "Claude Monet", "Johannes Vermeer", "Van Gogh"],
+  answers: ["Leonardo da Vinci", "Claude Monet", "Johannes Vermeer", "Van Gogh"],
   correctAnswer: 2
 },
 {
   image: "assets/images/starry_night.png",
   imageAlt: "The Starry Night",
-  answers: ["Pablo Picasso", "Van Gogh", "Rembrandt Harmenszoon", "Leonrdo da Vinci"],
+  answers: ["Pablo Picasso", "Van Gogh", "Rembrandt Harmenszoon", "Leonardo da Vinci"],
   correctAnswer: 1
 },
 {
